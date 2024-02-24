@@ -1,0 +1,42 @@
+package onitama;
+
+import boardgame.Board;
+import onitama.pieces.Disciple;
+import onitama.pieces.Master;
+
+public class OnitamaMatch {
+
+	private Board board;
+	
+	public OnitamaMatch() {
+		this.board = new Board(5,5);
+		initialSetup();
+	}
+	
+	public OnitamaPiece[][] getPieces(){
+		OnitamaPiece[][] mat = new OnitamaPiece[board.getRows()][board.getColumns()];
+		for (int i= 0; i<board.getRows(); i++) {
+			for(int j = 0; j<board.getColumns(); j++) {
+				mat[i][j]= (OnitamaPiece) board.piece(i, j);
+			}
+		}
+		return mat;
+	}
+	
+	private void placeNewPiece(char column, int row, OnitamaPiece piece){
+		board.placePiece(piece, new OnitamaPosition(column, row).toPosition());
+	}
+	
+	private void initialSetup() {
+		placeNewPiece('a',1, new Disciple(board, Color.RED));
+		placeNewPiece('b',1, new Disciple(board, Color.RED));
+		placeNewPiece('c',1, new Master(board, Color.RED));
+		placeNewPiece('d',1, new Disciple(board, Color.RED));
+		placeNewPiece('e',1, new Disciple(board, Color.RED));
+		placeNewPiece('a',5, new Disciple(board, Color.BLUE));
+		placeNewPiece('b',5, new Disciple(board, Color.BLUE));
+		placeNewPiece('c',5, new Master(board, Color.BLUE));
+		placeNewPiece('d',5, new Disciple(board, Color.BLUE));
+		placeNewPiece('e',5, new Disciple(board, Color.BLUE));
+	}
+}

@@ -1,0 +1,18 @@
+package application;
+
+import onitama.OnitamaPiece;
+
+public class UI {
+
+	public static void printBoard(OnitamaPiece[][] pieces) {
+		
+	}
+	
+	private static void printPiece(OnitamaPiece piece) {
+		if (piece == null) {
+			System.out.print("-");
+		} else {
+			System.out.print(piece);
+		}
+	}
+}
