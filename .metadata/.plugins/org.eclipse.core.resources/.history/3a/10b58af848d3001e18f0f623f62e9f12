@@ -1,0 +1,13 @@
+package onitama;
+
+import boardgame.Board;
+import boardgame.Piece;
+
+public class OnitamaPiece extends Piece {
+
+	public OnitamaPiece(Board board) {
+		super(board);
+		// TODO Auto-generated constructor stub
+	}
+
+}
