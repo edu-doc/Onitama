@@ -14,5 +14,11 @@ public class Master extends OnitamaPiece {
 	public String toString() {
 		return "M";
 	}
+
+	@Override
+	public boolean[][] possibleMoves() {
+		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		return mat;
+	}
 	
 }

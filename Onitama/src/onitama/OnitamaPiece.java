@@ -2,8 +2,9 @@ package onitama;
 
 import boardgame.Board;
 import boardgame.Piece;
+import boardgame.Position;
 
-public class OnitamaPiece extends Piece {
+public abstract class OnitamaPiece extends Piece {
 
 	private Color color;
 	
@@ -14,6 +15,11 @@ public class OnitamaPiece extends Piece {
 
 	public Color getColor() {
 		return color;
+	}
+	
+	protected boolean isThereOpponentPiece(Position position) {
+		OnitamaPiece piece = (OnitamaPiece)getBoard().piece(position);
+		return piece != null && piece.getColor() != this.color;
 	}
 
 }

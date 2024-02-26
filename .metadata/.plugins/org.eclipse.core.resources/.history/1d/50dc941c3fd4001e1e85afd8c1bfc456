@@ -1,0 +1,15 @@
+package onitama.pieces.moviments;
+
+import onitama.OnitamaPiece;
+
+public class Tiger extends OnitamaPiece {
+
+	@Override
+	public boolean[][] possibleMoves() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

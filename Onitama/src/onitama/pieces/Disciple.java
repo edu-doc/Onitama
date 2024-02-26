@@ -15,4 +15,10 @@ public class Disciple extends OnitamaPiece {
 		return "D";
 	}
 
+	@Override
+	public boolean[][] possibleMoves() {
+		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		return mat;
+	}
+
 }
