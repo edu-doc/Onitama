@@ -19,7 +19,7 @@ public abstract class OnitamaPiece extends Piece {
 	
 	protected boolean isThereOpponentPiece(Position position) {
 		OnitamaPiece piece = (OnitamaPiece)getBoard().piece(position);
-		return piece != null && piece.getColor() != this.color;
+		return piece != null && piece.getColor() != color;
 	}
 
 }

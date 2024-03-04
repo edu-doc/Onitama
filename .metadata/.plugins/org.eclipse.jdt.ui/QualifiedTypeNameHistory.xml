@@ -4,4 +4,7 @@
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="boardgame.Position"/>
     <fullyQualifiedTypeName name="onitama.OnitamaPiece"/>
+    <fullyQualifiedTypeName name="boardgame.Board"/>
+    <fullyQualifiedTypeName name="onitama.Card"/>
+    <fullyQualifiedTypeName name="onitama.OnitamaCard"/>
 </qualifiedTypeNameHistroy>
