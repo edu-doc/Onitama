@@ -1,0 +1,34 @@
+package application;
+
+import java.util.Scanner;
+
+import onitama.OnitamaMatch;
+import onitama.OnitamaPiece;
+import onitama.OnitamaPosition;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		OnitamaMatch onitamaMatch = new OnitamaMatch();
+		
+		while (true) {
+			
+			UI.clearScreen();
+			UI.printBoard(onitamaMatch.getPieces());
+			System.out.println();
+			System.out.print("Source: ");
+			OnitamaPosition source = UI.readOnitamaPosition(sc);
+			
+			System.out.println();
+			System.out.print("Target: ");
+			OnitamaPosition target = UI.readOnitamaPosition(sc);
+			
+			OnitamaPiece capturedPiece = onitamaMatch.perfomeOnitamaMove(source, target);
+			
+		}
+		
+	}
+
+}

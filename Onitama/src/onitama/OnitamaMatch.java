@@ -1,6 +1,8 @@
 package onitama;
 
 import boardgame.Board;
+import boardgame.Piece;
+import boardgame.Position;
 import onitama.pieces.Disciple;
 import onitama.pieces.Master;
 
@@ -21,6 +23,43 @@ public class OnitamaMatch {
 			}
 		}
 		return mat;
+	}
+	
+	public boolean[][] possibleMoves(OnitamaPosition sourcePosition){
+		Position position = sourcePosition.toPosition();
+		validateSourcePosition(position);
+		return board.piece(position).possibleMoves();
+	}
+	
+	public OnitamaPiece perfomeOnitamaMove(OnitamaPosition sourcePosition, OnitamaPosition targetPosition) {
+		Position source = sourcePosition.toPosition();
+		Position target = targetPosition.toPosition();
+		validateSourcePosition(source);
+		validateTargetPosition(source, target);
+		Piece capturedPiece = makeMove(source, target);
+		return (OnitamaPiece)capturedPiece;
+	}
+	
+	private Piece makeMove(Position source, Position target) {
+		Piece piece = board.removePiece(source);
+		Piece capturedPiece = board.removePiece(target);
+		board.placePiece(piece, target);
+		return capturedPiece;
+	}
+	
+	public void validateSourcePosition(Position position) {
+		if(!board.thereIsAPiece(position)) {
+			throw new OnitamaException("There is no piece on source position");
+		}
+		if(!board.piece(position).isThereAnyPossibleMove()) {
+			throw new OnitamaException("There is no possible moves for the piece");
+		}
+	}
+	
+	private void validateTargetPosition(Position source, Position target) {
+		if (!board.piece(source).possibleMove(target)) {
+			throw new OnitamaException("The chosen piece can't move to target position");
+		}
 	}
 	
 	private void placeNewPiece(char column, int row, OnitamaPiece piece){

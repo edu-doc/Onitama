@@ -1,0 +1,19 @@
+package onitama;
+
+public class OnitamaCard {
+
+	private Card card;
+	
+	public OnitamaCard(String card) {
+		card = card.toUpperCase();
+		
+		for(Card c : Card.values()) {
+			if(c.name().equals(card)) {
+				this.card = c;
+				break;
+			}
+		}
+	}
+	
+	
+}

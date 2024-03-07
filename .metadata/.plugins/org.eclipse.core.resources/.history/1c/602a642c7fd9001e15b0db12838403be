@@ -1,0 +1,126 @@
+package onitama.pieces;
+
+import boardgame.Board;
+import boardgame.Position;
+import onitama.Card;
+import onitama.Color;
+import onitama.OnitamaCard;
+import onitama.OnitamaPiece;
+
+public class Disciple extends OnitamaPiece {
+
+	public Disciple(Board board, Color color) {
+		super(board, color);
+	}
+	
+	private boolean canMove(Position position) {
+		OnitamaPiece op = (OnitamaPiece)getBoard().piece(position);
+		return op == null || op.getColor() != getColor();
+	}
+
+	@Override
+	public String toString() {
+		return "D";
+	}
+
+	@Override
+	public boolean[][] possibleMoves() {
+		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		
+		Position p = new Position(0, 0);
+		
+		switch(OnitamaCard.getCard()) {
+		
+			case BOAR:
+				//above
+				p.setValues(position.getRow()-1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+			  
+			case COBRA:
+			
+				//above-right
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//below-right
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				break;
+				
+			case CRAB:
+				//above
+				p.setValues(position.getRow()-1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				break;
+			
+			case CRANE:
+				
+			case DRAGON:
+				
+			case EEL:
+			
+			case ELEPHANT:
+				
+			case FROG:
+				
+			case GOOSE:
+				
+			case HORSE:
+				
+			case MANTIS:
+				
+			case MONKEY:
+				
+			case OX:
+				
+			case RABBIT:
+				
+			case ROOSTER:
+			
+			case TIGER:
+		}
+		
+		
+		
+		return mat;
+	}
+
+}
