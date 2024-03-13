@@ -4,6 +4,7 @@ import boardgame.Board;
 import boardgame.Position;
 import onitama.Color;
 import onitama.OnitamaCard;
+import onitama.OnitamaMatch;
 import onitama.OnitamaPiece;
 
 public class Disciple extends OnitamaPiece {
@@ -30,8 +31,10 @@ public class Disciple extends OnitamaPiece {
 		
 		switch(OnitamaCard.getCard()) {
 		
-			case BOAR:
-				
+		case BOAR:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above
 				p.setValues(position.getRow()-1, position.getColumn());
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -50,9 +53,36 @@ public class Disciple extends OnitamaPiece {
 					mat[p.getRow()][p.getColumn()] = true;
 				}
 				break;
-			  
-			case COBRA:
+				
+			} else {
+				
+				//above
+				p.setValues(position.getRow()+1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				break;
+				
+			}
 			
+			
+		  
+		case COBRA:
+		
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
 				//above-right
 				p.setValues(position.getRow()-1, position.getColumn()+1);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -72,7 +102,35 @@ public class Disciple extends OnitamaPiece {
 				}
 				break;
 				
-			case CRAB:
+			} else {
+				
+				//above-right
+				p.setValues(position.getRow()+1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//below-right
+				p.setValues(position.getRow()-1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+				
+			}
+			
+			
+		case CRAB:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
 				//above
 				p.setValues(position.getRow()-1, position.getColumn());
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -91,9 +149,34 @@ public class Disciple extends OnitamaPiece {
 					mat[p.getRow()][p.getColumn()] = true;
 				}
 				break;
-			
-			case CRANE:
 				
+			} else {
+				
+				//above
+				p.setValues(position.getRow()+1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-left
+				p.setValues(position.getRow(), position.getColumn()+2);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right-right
+				p.setValues(position.getRow(), position.getColumn()-2);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				break;
+				
+			}
+			
+		
+		case CRANE:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
 				//above
 				p.setValues(position.getRow()-1, position.getColumn());
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -114,8 +197,33 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case DRAGON:
+			} else {
 				
+				//above
+				p.setValues(position.getRow()+1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right-below
+				p.setValues(position.getRow()-1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case DRAGON:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
 				//above-left-left
 				p.setValues(position.getRow()-1, position.getColumn()-2);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -142,8 +250,40 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case EEL:
+			} else {
 				
+				//above-left-left
+				p.setValues(position.getRow()+1, position.getColumn()+2);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//above-right-right
+				p.setValues(position.getRow()+1, position.getColumn()-2);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right-below
+				p.setValues(position.getRow()-1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case EEL:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above-left
 				p.setValues(position.getRow()-1, position.getColumn()-1);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -163,9 +303,35 @@ public class Disciple extends OnitamaPiece {
 				}
 				
 				break;
-			
-			case ELEPHANT:
 				
+			} else {
+				
+				//above-left
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+		
+		case ELEPHANT:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above-left
 				p.setValues(position.getRow()-1, position.getColumn()-1);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -192,8 +358,40 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case FROG:
+			} else {
 				
+				//above-left
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//above-right
+				p.setValues(position.getRow()+1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case FROG:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//left-left
 				p.setValues(position.getRow(), position.getColumn()-2);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -214,7 +412,33 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case GOOSE:
+			} else {
+				
+				//left-left
+				p.setValues(position.getRow(), position.getColumn()+2);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//above-left
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case GOOSE:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
 				
 				//above-left
 				p.setValues(position.getRow()-1, position.getColumn()-1);
@@ -242,8 +466,40 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case HORSE:
+			} else {
 				
+				//above-left
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right-below
+				p.setValues(position.getRow()-1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case HORSE:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above
 				p.setValues(position.getRow()-1, position.getColumn());
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -264,7 +520,33 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case MANTIS:
+			} else {
+				
+				//above
+				p.setValues(position.getRow()+1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//below
+				p.setValues(position.getRow()-1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case MANTIS:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
 				
 				//above-left
 				p.setValues(position.getRow()-1, position.getColumn()-1);
@@ -286,7 +568,34 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case MONKEY:
+			} else {
+				
+				//above-left
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//above-right
+				p.setValues(position.getRow()+1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//below
+				p.setValues(position.getRow()-1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+				
+			}
+			
+			
+		case MONKEY:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
 				
 				//above-left
 				p.setValues(position.getRow()-1, position.getColumn()-1);
@@ -314,7 +623,39 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case OX:
+			} else {
+				
+				//above-left
+				p.setValues(position.getRow()+1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//above-right
+				p.setValues(position.getRow()+1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right-below
+				p.setValues(position.getRow()-1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case OX:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
 				
 				//above
 				p.setValues(position.getRow()-1, position.getColumn());
@@ -336,8 +677,34 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case RABBIT:
+			} else {
 				
+				//above
+				p.setValues(position.getRow()+1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//below
+				p.setValues(position.getRow()-1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case RABBIT:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above-right
 				p.setValues(position.getRow()-1, position.getColumn()+1);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -358,8 +725,34 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
-			case ROOSTER:
+			} else {
 				
+				//above-right
+				p.setValues(position.getRow()+1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right-right
+				p.setValues(position.getRow(), position.getColumn()-2);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+			
+		case ROOSTER:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above-right
 				p.setValues(position.getRow()-1, position.getColumn()+1);
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -385,9 +778,41 @@ public class Disciple extends OnitamaPiece {
 				}
 				
 				break;
-			
-			case TIGER:
 				
+			} else {
+				
+				//above-right
+				p.setValues(position.getRow()+1, position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//right
+				p.setValues(position.getRow(), position.getColumn()-1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left-below
+				p.setValues(position.getRow()-1, position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//left
+				p.setValues(position.getRow(), position.getColumn()+1);
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+			
+		
+		case TIGER:
+			
+			if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			
 				//above-above
 				p.setValues(position.getRow()-2, position.getColumn());
 				if(getBoard().positionExists(p) && canMove(p)) {
@@ -402,9 +827,24 @@ public class Disciple extends OnitamaPiece {
 				
 				break;
 				
+			} else {
+				
+				//above-above
+				p.setValues(position.getRow()+2, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				//below
+				p.setValues(position.getRow()-1, position.getColumn());
+				if(getBoard().positionExists(p) && canMove(p)) {
+					mat[p.getRow()][p.getColumn()] = true;
+				}
+				
+				break;
+			}
+		
 		}
-		
-		
 		
 		return mat;
 	}
