@@ -1,0 +1,29 @@
+package onitama.pieces;
+
+import boardgame.Board;
+import boardgame.Position;
+import onitama.Color;
+import onitama.OnitamaCard;
+import onitama.OnitamaMatch;
+import onitama.OnitamaPiece;
+
+public class Master {
+
+	public Master(Board board, Color color) {
+		super(board, color);
+	}
+
+	@Override
+	public String toString() {
+		return "M";
+	}
+
+	@Override
+	public boolean[][] possibleMoves() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public 
+	
+}

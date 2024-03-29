@@ -1,6 +1,8 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import onitama.OnitamaCard;
@@ -15,13 +17,13 @@ public class Test {
 		
 		Scanner sc = new Scanner(System.in);
 		OnitamaMatch onitamaMatch = new OnitamaMatch();
+		List<OnitamaPiece> captured = new ArrayList<>();
 		
 		while (true) {
 			try {
-				UI.printBoard(onitamaMatch.getPieces());
+				UI.clearScreen();
+				UI.printMatch(onitamaMatch, captured);
 				
-				System.out.println();
-				System.out.println();
 				System.out.print("Card: ");
 				OnitamaCard card = UI.readOnitamaCard(sc);
 				
@@ -38,6 +40,10 @@ public class Test {
 				OnitamaPosition target = UI.readOnitamaPosition(sc);
 				
 				OnitamaPiece capturedPiece = onitamaMatch.perfomeOnitamaMove(source, target);
+				
+				if (capturedPiece != null) {
+					captured.add(capturedPiece);
+				}
 			}
 			catch(OnitamaException e) {
 				System.out.println(e.getMessage());

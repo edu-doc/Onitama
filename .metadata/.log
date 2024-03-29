@@ -544,3 +544,1263 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-03-05 10:02:01.930 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.8.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-05 10:02:02.890
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-05 10:02:19.572
+!MESSAGE Logback config file: C:\Users\anton\OneDrive\Documentos\Codigos\UFERSA\Onitama\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-03-05 10:02:21.430
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-05 10:02:21.430
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-05 10:02:21.430
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-03-05 10:02:24.866
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\anton'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-03-12 10:01:43.215 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.8.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-12 10:01:44.288
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-12 10:02:00.950
+!MESSAGE Logback config file: C:\Users\anton\OneDrive\Documentos\Codigos\UFERSA\Onitama\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-03-12 10:02:03.088
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-12 10:02:03.088
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-12 10:02:03.088
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-03-12 10:02:06.939
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\anton'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-03-13 10:13:13.344 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.8.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-13 10:13:16.150
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-13 10:13:24.201
+!MESSAGE Logback config file: C:\Users\anton\OneDrive\Documentos\Codigos\UFERSA\Onitama\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-03-13 10:13:34.677
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-13 10:13:34.677
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-13 10:13:34.677
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-03-13 10:13:40.117
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\anton'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-03-13 12:29:36.973 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.8.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-13 12:29:39.919
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-13 12:29:50.362
+!MESSAGE Logback config file: C:\Users\anton\OneDrive\Documentos\Codigos\UFERSA\Onitama\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-03-13 12:29:58.653
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-13 12:29:58.653
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-13 12:29:58.653
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-03-13 12:30:03.540
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\anton'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-03-13 12:44:02.897 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.8.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-13 12:44:03.844
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-03-13 12:44:07.627
+!MESSAGE Logback config file: C:\Users\anton\OneDrive\Documentos\Codigos\UFERSA\Onitama\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-03-13 12:44:09.551
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-13 12:44:09.551
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-03-13 12:44:09.551
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-03-13 12:44:13.323
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\anton'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-13 15:18:49.057
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package onitama.pieces.cards;
+
+import boardgame.Board;
+import boardgame.Position;
+import onitama.Color;
+import onitama.OnitamaCard;
+import onitama.OnitamaMatch;
+import onitama.OnitamaPiece;
+
+public class Card {
+	
+	private static boolean canMove(Position position, Board board, Color color) {
+		OnitamaPiece op = (OnitamaPiece)board.piece(position);
+		return op == null || op.getColor() != color;
+	}
+	
+	public static boolean[][] possibleMoves(Board board, Color color, Position position) {
+		
+		boolean[][] mat = new boolean[board.getRows()][board.getColumns()];
+		
+		Position p = new Position(0,0);
+		
+		if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+			byte multi = 1;
+		} else {
+			byte multi = -1;
+		}
+		
+		switch(OnitamaCard.getCard()) {
+		
+			case BOAR:
+				
+				
+					//above
+					p.setValues(position.getRow()(-1*, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					break;
+					
+				} else {
+					
+					//above
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					break;
+					
+				}
+				
+				
+			  
+			case COBRA:
+			
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					
+					//above-right
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below-right
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					break;
+					
+				} else {
+					
+					//above-right
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below-right
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				}
+				
+				
+			case CRAB:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					
+					//above
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-left
+					p.setValues(position.getRow(), position.getColumn()-2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-right
+					p.setValues(position.getRow(), position.getColumn()+2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					break;
+					
+				} else {
+					
+					//above
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-left
+					p.setValues(position.getRow(), position.getColumn()+2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-right
+					p.setValues(position.getRow(), position.getColumn()-2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					break;
+					
+				}
+				
+			
+			case CRANE:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					//above
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case DRAGON:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					//above-left-left
+					p.setValues(position.getRow()-1, position.getColumn()-2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right-right
+					p.setValues(position.getRow()-1, position.getColumn()+2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-left-left
+					p.setValues(position.getRow()+1, position.getColumn()+2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right-right
+					p.setValues(position.getRow()+1, position.getColumn()-2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case EEL:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//above-left
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-left
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+			
+			case ELEPHANT:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//above-left
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-left
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case FROG:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//left-left
+					p.setValues(position.getRow(), position.getColumn()-2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-left
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//left-left
+					p.setValues(position.getRow(), position.getColumn()+2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-left
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case GOOSE:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					
+					//above-left
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-left
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case HORSE:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//above
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case MANTIS:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					
+					//above-left
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-left
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				}
+				
+				
+			case MONKEY:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					
+					//above-left
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-left
+					p.setValues(position.getRow()+1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//above-right
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-below
+					p.setValues(position.getRow()-1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case OX:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+					
+					//above
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case RABBIT:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//above-right
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-right
+					p.setValues(position.getRow(), position.getColumn()+2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-right
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right-right
+					p.setValues(position.getRow(), position.getColumn()-2);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+			case ROOSTER:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//above-right
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-right
+					p.setValues(position.getRow()+1, position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//right
+					p.setValues(position.getRow(), position.getColumn()-1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left-below
+					p.setValues(position.getRow()-1, position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//left
+					p.setValues(position.getRow(), position.getColumn()+1);
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+			
+			case TIGER:
+				
+				if (OnitamaMatch.getCurrentPlayer() == Color.RED) {
+				
+					//above-above
+					p.setValues(position.getRow()-2, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()+1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+					
+				} else {
+					
+					//above-above
+					p.setValues(position.getRow()+2, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					//below
+					p.setValues(position.getRow()-1, position.getColumn());
+					if(board.positionExists(p) && canMove(p, board, color)) {
+						mat[p.getRow()][p.getColumn()] = true;
+					}
+					
+					break;
+				}
+				
+				
+		}
+		
+		return mat;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3188)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3075)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-03-13 15:18:49.060
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3188)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3075)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-03-13 15:18:49.061
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3188)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3075)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)

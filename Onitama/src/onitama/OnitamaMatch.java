@@ -1,5 +1,8 @@
 package onitama;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
@@ -8,11 +11,26 @@ import onitama.pieces.Master;
 
 public class OnitamaMatch {
 
+	private int turn;
+	private static Color currentPlayer;
 	private Board board;
+	
+	private List<Piece> piecesOnTheBoard = new ArrayList<>();
+	private List<Piece> capturedPieces = new ArrayList<>();
 	
 	public OnitamaMatch() {
 		this.board = new Board(5,5);
+		turn = 1;
+		currentPlayer = Color.RED;
 		initialSetup();
+	}
+	
+	public int getTurn() {
+		return turn;
+	}
+	
+	public static Color getCurrentPlayer() {
+		return currentPlayer;
 	}
 	
 	public OnitamaPiece[][] getPieces(){
@@ -37,6 +55,7 @@ public class OnitamaMatch {
 		validateSourcePosition(source);
 		validateTargetPosition(source, target);
 		Piece capturedPiece = makeMove(source, target);
+		nextTurn();
 		return (OnitamaPiece)capturedPiece;
 	}
 	
@@ -44,12 +63,21 @@ public class OnitamaMatch {
 		Piece piece = board.removePiece(source);
 		Piece capturedPiece = board.removePiece(target);
 		board.placePiece(piece, target);
+		
+		if (capturedPiece != null) {
+			piecesOnTheBoard.remove(capturedPiece);
+			capturedPieces.add(capturedPiece);
+		}
+		
 		return capturedPiece;
 	}
 	
 	public void validateSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
 			throw new OnitamaException("There is no piece on source position");
+		}
+		if (currentPlayer != ((OnitamaPiece)board.piece(position)).getColor()) {
+			throw new OnitamaException("The chosen piece is not yours");
 		}
 		if(!board.piece(position).isThereAnyPossibleMove()) {
 			throw new OnitamaException("There is no possible moves for the piece");
@@ -62,8 +90,14 @@ public class OnitamaMatch {
 		}
 	}
 	
+	private void nextTurn() {
+		turn++;
+		currentPlayer = (currentPlayer == Color.RED) ? Color.BLUE : Color.RED;
+	}
+	
 	private void placeNewPiece(char column, int row, OnitamaPiece piece){
 		board.placePiece(piece, new OnitamaPosition(column, row).toPosition());
+		piecesOnTheBoard.add(piece);
 	}
 	
 	private void initialSetup() {
