@@ -54,16 +54,22 @@ public class Test {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
+			
+			if(onitamaMatch.getCurrentPlayer() == Color.RED) {
+				System.out.println("");
+				System.out.println("Blue player win");
+			} else {
+				System.out.println("");
+				System.out.println("Red player win");
+			}
+			
+		}
+			
 		}
 		
-		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
-			System.out.println("");
-			System.out.println("Blue player win");
-		} else {
-			System.out.println("");
-			System.out.println("Red player win");
-		}
 		
-		}
-		
+	}
+	
+	
+
 }

@@ -1,8 +1,0 @@
-package onitama.pieces.moviments;
-
-import onitama.OnitamaCard;
-
-public class Boar {
-
-	
-}

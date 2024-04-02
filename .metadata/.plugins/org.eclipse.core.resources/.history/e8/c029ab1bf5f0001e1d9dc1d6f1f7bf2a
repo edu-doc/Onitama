@@ -95,15 +95,6 @@ public class OnitamaMatch {
 		currentPlayer = (currentPlayer == Color.RED) ? Color.BLUE : Color.RED;
 	}
 	
-	public boolean onitamaMateKill() {
-		for(Piece piece : capturedPieces) {
-			if(piece.toString() == "M") {
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	private void placeNewPiece(char column, int row, OnitamaPiece piece){
 		board.placePiece(piece, new OnitamaPosition(column, row).toPosition());
 		piecesOnTheBoard.add(piece);
