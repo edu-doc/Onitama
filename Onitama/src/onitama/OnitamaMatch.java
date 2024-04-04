@@ -1,7 +1,6 @@
 package onitama;
 
-import java.util.ArrayList;
-import java.util.List;
+import myCollection.*;
 
 import boardgame.Board;
 import boardgame.Piece;
@@ -15,8 +14,8 @@ public class OnitamaMatch {
 	private static Color currentPlayer;
 	private Board board;
 	
-	private List<Piece> piecesOnTheBoard = new ArrayList<>();
-	private List<Piece> capturedPieces = new ArrayList<>();
+	private MyLinkedListSingle<Piece> piecesOnTheBoard = new MyLinkedListSingle<>();
+	private MyLinkedListSingle<Piece> capturedPieces = new MyLinkedListSingle<>();
 	
 	public OnitamaMatch() {
 		this.board = new Board(5,5);
@@ -65,8 +64,7 @@ public class OnitamaMatch {
 		board.placePiece(piece, target);
 		
 		if (capturedPiece != null) {
-			piecesOnTheBoard.remove(capturedPiece);
-			capturedPieces.add(capturedPiece);
+			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
 		}
 		
 		return capturedPiece;

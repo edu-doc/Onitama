@@ -21,7 +21,7 @@ public class OnitamaCard {
 	}
 	
 	public void setCard(Card card) {
-		this.card = card;
+		OnitamaCard.card = card;
 	}
 
 	public static Card getCard() {

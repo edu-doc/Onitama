@@ -261,6 +261,60 @@ public class MyLinkedListSingle <E> implements List <E>{
         return copy;
     }
 
+    public boolean transferNode(MyLinkedListSingle<E> target, E element) {
+        if (isEmpty() || element == null) return false;
+
+        Node p = head;
+        Node prev = null;
+
+        while (p != null) {
+            if (p.data.equals(element)) {
+                if (prev == null) {
+                    Node aux = head;  // Auxiliar salva o Node
+                    head = head.next;  // Head atualizado da lista que removeu o Node
+                    aux.next = null;  // O novo Node de target aponta para o final
+
+                    if (target.isEmpty()) {
+                        target.head = aux;  // Head de target atualizado
+                    } else {
+                        target.tail.next = aux;  // Novo Node inserido em target
+                        target.tail = aux;  // Tail de target atualizado
+                    }
+                } else if (p == tail) {
+                    Node aux = tail;  // Auxiliar salva o Node
+                    prev.next = null;  // Deslink do Node da lista antiga
+                    tail = prev;  // Tail da lista fornecedora atualizado
+                    
+                    if (target.isEmpty()) {
+                        target.head = aux;  // Head de target atualizado
+                    } else {
+                        target.tail.next = aux;  // Novo Node inserido em target
+                        target.tail = aux;  // Tail de target atualizado
+                    }
+                } else {
+                    Node aux = p;  // Auxiliar salva o Node
+                    prev.next = p.next;  // Deslink do Node da lista antiga
+                    aux.next = null;  // O novo Node de target aponta para o final
+                    
+                    if (target.isEmpty()) {
+                        target.head = aux;  // Head de target atualizado
+                    } else {
+                        target.tail.next = aux;  // Novo Node inserido em target
+                        target.tail = aux;  // Tail de target atualizado
+                    }
+                }
+                
+                size--;
+                return true;
+            }
+
+            prev = p;
+            p = p.next;
+        }
+
+        return false;
+    }
+
     @Override
     public int indexOf(Object o) {
         // TODO Auto-generated method stub
@@ -289,5 +343,22 @@ public class MyLinkedListSingle <E> implements List <E>{
     public List<E> subList(int fromIndex, int toIndex) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'subList'");
+    }
+
+    //toString
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        Node p = head;
+        while (p != null) {
+            sb.append(p.data);
+            if (p.next != null) {
+                sb.append(", ");
+            }
+            p = p.next;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }
