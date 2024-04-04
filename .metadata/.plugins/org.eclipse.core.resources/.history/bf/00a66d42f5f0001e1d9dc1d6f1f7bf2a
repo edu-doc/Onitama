@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-import onitama.Color;
 import onitama.OnitamaCard;
 import onitama.OnitamaException;
 import onitama.OnitamaMatch;
@@ -20,7 +19,7 @@ public class Test {
 		OnitamaMatch onitamaMatch = new OnitamaMatch();
 		List<OnitamaPiece> captured = new ArrayList<>();
 		
-		while (!onitamaMatch.onitamaMateKill()) {
+		while (true) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(onitamaMatch, captured);
@@ -54,16 +53,9 @@ public class Test {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
+			
 		}
 		
-		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
-			System.out.println("");
-			System.out.println("Blue player win");
-		} else {
-			System.out.println("");
-			System.out.println("Red player win");
-		}
-		
-		}
-		
+	}
+
 }

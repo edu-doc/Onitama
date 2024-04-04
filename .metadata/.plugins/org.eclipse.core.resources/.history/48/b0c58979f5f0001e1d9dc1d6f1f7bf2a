@@ -54,6 +54,9 @@ public class Test {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
+			
+			
+			
 		}
 		
 		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
@@ -64,6 +67,10 @@ public class Test {
 			System.out.println("Red player win");
 		}
 		
-		}
+	}
 		
+	}
+	
+	
+
 }
