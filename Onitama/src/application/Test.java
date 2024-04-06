@@ -5,6 +5,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import myCollection.MyQueueLinkedList;
+import onitama.Card;
 import onitama.Color;
 import onitama.OnitamaCard;
 import onitama.OnitamaException;
@@ -20,13 +22,18 @@ public class Test {
 		OnitamaMatch onitamaMatch = new OnitamaMatch();
 		List<OnitamaPiece> captured = new ArrayList<>();
 		
+		OnitamaCard.getListCard();
+		
 		while (!onitamaMatch.onitamaMateKill()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(onitamaMatch, captured);
 				
+				System.out.println("Table card: "+UI.returnTableCard());
+				System.out.println("Your cards "+UI.returnPlayerCard());
 				System.out.print("Card: ");
 				OnitamaCard card = UI.readOnitamaCard(sc);
+				OnitamaCard.exchangeCard(card);
 				
 				System.out.println();
 				System.out.print("Source: ");
