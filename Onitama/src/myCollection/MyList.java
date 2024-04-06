@@ -3,8 +3,9 @@ package myCollection;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Collection;
+import java.io.Serializable;
 
-public interface MyList<E> extends Iterable<E>{
+public interface MyList<E> extends Iterable<E>, Serializable{
     boolean add(E arg0);
 
     void add(int index, E arg1);

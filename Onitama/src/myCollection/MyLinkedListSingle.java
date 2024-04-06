@@ -251,39 +251,30 @@ public class MyLinkedListSingle<E> implements MyLinkedListInterface<E>{
 
         while (p != null) {
             if (p.data.equals(element)) {
+                Node aux;
+
+                // Remoção do Node da lista fornecedora
                 if (prev == null) {
-                    Node aux = head;  // Auxiliar salva o Node
+                    aux = head;  // Auxiliar salva o Node
                     head = head.next;  // Head atualizado da lista que removeu o Node
                     aux.next = null;  // O novo Node de target aponta para o final
-
-                    if (target.isEmpty()) {
-                        target.head = aux;  // Head de target atualizado
-                    } else {
-                        target.tail.next = aux;  // Novo Node inserido em target
-                        target.tail = aux;  // Tail de target atualizado
-                    }
                 } else if (p == tail) {
-                    Node aux = tail;  // Auxiliar salva o Node
+                    aux = tail;  // Auxiliar salva o Node
                     prev.next = null;  // Deslink do Node da lista antiga
                     tail = prev;  // Tail da lista fornecedora atualizado
-                    
-                    if (target.isEmpty()) {
-                        target.head = aux;  // Head de target atualizado
-                    } else {
-                        target.tail.next = aux;  // Novo Node inserido em target
-                        target.tail = aux;  // Tail de target atualizado
-                    }
                 } else {
-                    Node aux = p;  // Auxiliar salva o Node
+                    aux = p;  // Auxiliar salva o Node
                     prev.next = p.next;  // Deslink do Node da lista antiga
                     aux.next = null;  // O novo Node de target aponta para o final
-                    
-                    if (target.isEmpty()) {
-                        target.head = aux;  // Head de target atualizado
-                    } else {
-                        target.tail.next = aux;  // Novo Node inserido em target
-                        target.tail = aux;  // Tail de target atualizado
-                    }
+                }
+
+                // Inserção do Node em target
+                if (target.isEmpty()) {
+                    target.head = aux;  // Head de target atualizado
+                    target.tail = aux;
+                } else {
+                    target.tail.next = aux;  // Novo Node inserido em target
+                    target.tail = aux;  // Tail de target atualizado
                 }
                 
                 size--;
