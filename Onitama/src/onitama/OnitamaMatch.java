@@ -48,11 +48,12 @@ public class OnitamaMatch {
 		return board.piece(position).possibleMoves();
 	}
 	
-	public OnitamaPiece perfomeOnitamaMove(OnitamaPosition sourcePosition, OnitamaPosition targetPosition) {
+	public OnitamaPiece perfomeOnitamaMove(OnitamaPosition sourcePosition, OnitamaPosition targetPosition, OnitamaCard card) {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
 		validateSourcePosition(source);
 		validateTargetPosition(source, target);
+		OnitamaCard.exchangeCard(card);
 		Piece capturedPiece = makeMove(source, target);
 		nextTurn();
 		return (OnitamaPiece)capturedPiece;

@@ -33,7 +33,6 @@ public class Test {
 				System.out.println("Your cards "+UI.returnPlayerCard());
 				System.out.print("Card: ");
 				OnitamaCard card = UI.readOnitamaCard(sc);
-				OnitamaCard.exchangeCard(card);
 				
 				System.out.println();
 				System.out.print("Source: ");
@@ -47,8 +46,8 @@ public class Test {
 				System.out.print("Target: ");
 				OnitamaPosition target = UI.readOnitamaPosition(sc);
 				
-				OnitamaPiece capturedPiece = onitamaMatch.perfomeOnitamaMove(source, target);
-				
+				OnitamaPiece capturedPiece = onitamaMatch.perfomeOnitamaMove(source, target, card);
+
 				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}

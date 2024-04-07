@@ -259,8 +259,8 @@ public class MyLinkedListSingle<E> implements MyLinkedListInterface<E>{
                     if (target.isEmpty()) {
                         target.head = aux;  // Head de target atualizado
                     } else {
-                        target.tail.next = aux;  // Novo Node inserido em target
-                        target.tail = aux;  // Tail de target atualizado
+                        target.tail = aux;  // Novo Node inserido em target
+                        target.head = aux;  // Tail de target atualizado
                     }
                 } else if (p == tail) {
                     Node aux = tail;  // Auxiliar salva o Node
