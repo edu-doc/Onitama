@@ -5,8 +5,6 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-import myCollection.MyQueueLinkedList;
-import onitama.Card;
 import onitama.Color;
 import onitama.OnitamaCard;
 import onitama.OnitamaException;
@@ -51,6 +49,7 @@ public class Test {
 				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}
+				
 			}
 			catch(OnitamaException e) {
 				System.out.println(e.getMessage());
@@ -65,9 +64,11 @@ public class Test {
 		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
 			System.out.println("");
 			System.out.println("Blue player win");
+
 		} else {
 			System.out.println("");
 			System.out.println("Red player win");
+
 		}
 		
 		}
