@@ -2,11 +2,10 @@ package myCollection;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
-public class MyLinkedListSingle <E> implements List <E>{
+public class MyLinkedListSingle<E> implements MyLinkedListInterface<E>{
     class Node {
         E data;
         Node next;
@@ -65,25 +64,6 @@ public class MyLinkedListSingle <E> implements List <E>{
     }
 
     @Override
-    public Object[] toArray() {
-        Object[] arr = new Object[size];
-        Node p = head;
-
-        while(p != null) {
-            arr[--size] = p.data;
-            p = p.next;
-        }
-
-        return arr;
-    }
-
-    @Override
-    public <T> T[] toArray(T[] a) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'toArray'");
-    }
-
-    @Override
     public boolean add(E e) {
         if (e == null) return false;
 
@@ -129,7 +109,7 @@ public class MyLinkedListSingle <E> implements List <E>{
     }
 
     @Override
-    public boolean containsAll(Collection<?> c) {
+    public boolean containsAll(Collection<E> c) {
         for (Object i : c) {
             if (!contains(i)) return false; 
         }
@@ -138,7 +118,7 @@ public class MyLinkedListSingle <E> implements List <E>{
     }
 
     @Override
-    public boolean addAll(Collection<? extends E> c) {
+    public boolean addAll(Collection<E> c) {
         for (E i : c) {
             if (i == null) return false;
             add(i);
@@ -148,7 +128,7 @@ public class MyLinkedListSingle <E> implements List <E>{
     }
 
     @Override
-    public boolean addAll(int index, Collection<? extends E> c) {
+    public boolean addAll(int index, Collection<E> c) {
         for (E i : c) {
             if (i == null) return false;
             add(index, i);
@@ -159,7 +139,7 @@ public class MyLinkedListSingle <E> implements List <E>{
     }
 
     @Override
-    public boolean removeAll(Collection<?> c) {
+    public boolean removeAll(Collection<E> c) {
         for (Object i : c) {
             if (i == null || !contains(i)) return false;
             remove(i);
@@ -169,11 +149,13 @@ public class MyLinkedListSingle <E> implements List <E>{
     }
 
     @Override
-    public boolean retainAll(Collection<?> c) {
-        for (Object i : this) {
-            if (!c.contains(i)) {
-                remove(i);
-            }   
+    public boolean retainAll(Collection<E> c) {
+        Iterator<E> iterator = iterator();
+        while (iterator.hasNext()) {
+            E element = iterator.next();
+            if (!c.contains(element)) {
+                iterator.remove();
+            }
         }
 
         return true;
@@ -261,6 +243,51 @@ public class MyLinkedListSingle <E> implements List <E>{
         return copy;
     }
 
+    public boolean transferNode(MyLinkedListSingle<E> target, E element) {
+        if (isEmpty() || element == null) return false;
+
+        Node p = head;
+        Node prev = null;
+
+        while (p != null) {
+            if (p.data.equals(element)) {
+                Node aux;
+
+                // Remoção do Node da lista fornecedora
+                if (prev == null) {
+                    aux = head;  // Auxiliar salva o Node
+                    head = head.next;  // Head atualizado da lista que removeu o Node
+                    aux.next = null;  // O novo Node de target aponta para o final
+                } else if (p == tail) {
+                    aux = tail;  // Auxiliar salva o Node
+                    prev.next = null;  // Deslink do Node da lista antiga
+                    tail = prev;  // Tail da lista fornecedora atualizado
+                } else {
+                    aux = p;  // Auxiliar salva o Node
+                    prev.next = p.next;  // Deslink do Node da lista antiga
+                    aux.next = null;  // O novo Node de target aponta para o final
+                }
+
+                // Inserção do Node em target
+                if (target.isEmpty()) {
+                    target.head = aux;  // Head de target atualizado
+                    target.tail = aux;
+                } else {
+                    target.tail.next = aux;  // Novo Node inserido em target
+                    target.tail = aux;  // Tail de target atualizado
+                }
+                
+                size--;
+                return true;
+            }
+
+            prev = p;
+            p = p.next;
+        }
+
+        return false;
+    }
+
     @Override
     public int indexOf(Object o) {
         // TODO Auto-generated method stub
@@ -284,10 +311,56 @@ public class MyLinkedListSingle <E> implements List <E>{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listIterator'");
     }
+    
+    @Override
+    public void addFirst(Object arg0) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addFirst'");
+    }
 
     @Override
-    public List<E> subList(int fromIndex, int toIndex) {
+    public void addLast(Object arg0) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'subList'");
+        throw new UnsupportedOperationException("Unimplemented method 'addLast'");
+    }
+
+    @Override
+    public Object getFirst() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFirst'");
+    }
+
+    @Override
+    public Object getLast() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getLast'");
+    }
+
+    @Override
+    public Object removeFirst() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeFirst'");
+    }
+
+    @Override
+    public Object removeLast() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeLast'");
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        Node p = head;
+        while (p != null) {
+            sb.append(p.data);
+            if (p.next != null) {
+                sb.append(", ");
+            }
+            p = p.next;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

@@ -2,10 +2,9 @@ package myCollection;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.ListIterator;
 
-public class MyArrayList<E> implements List<E> {
+public class MyArrayList<E> implements MyList<E>{
     private E[] array;
     private int size;
 
@@ -59,7 +58,7 @@ public class MyArrayList<E> implements List<E> {
     }
 
     @Override
-    public boolean addAll(Collection<? extends E> arg0) {
+    public boolean addAll(Collection<E> arg0) {
         Iterator<? extends E> it = arg0.iterator();
 
         while (it.hasNext()) {
@@ -70,7 +69,7 @@ public class MyArrayList<E> implements List<E> {
     }
 
     @Override
-    public boolean addAll(int index, Collection<? extends E> arg1) {
+    public boolean addAll(int index, Collection<E> arg1) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
@@ -105,7 +104,7 @@ public class MyArrayList<E> implements List<E> {
     }
 
     @Override
-    public boolean containsAll(Collection<?> arg0) {
+    public boolean containsAll(Collection<E> arg0) {
         Iterator<?> it = arg0.iterator();
 
         while (it.hasNext()) {
@@ -207,7 +206,7 @@ public class MyArrayList<E> implements List<E> {
     }
 
     @Override
-    public boolean removeAll(Collection<?> arg0) {
+    public boolean removeAll(Collection<E> arg0) {
         Iterator<?> it = arg0.iterator();
 
         while (it.hasNext()) {
@@ -218,7 +217,7 @@ public class MyArrayList<E> implements List<E> {
     }
 
     @Override
-    public boolean retainAll(Collection<?> arg0) {
+    public boolean retainAll(Collection<E> arg0) {
         Iterator<?> it = iterator();
 
         while (it.hasNext()) {
@@ -244,21 +243,8 @@ public class MyArrayList<E> implements List<E> {
         return array.length;
     }
 
-    @Override
-    public List subList(int arg0, int arg1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'subList'");
-    }
-
-    @Override
     public Object[] toArray() {
         return MyArrayList.copyOf(array, size);
-    }
-
-    @Override
-    public Object[] toArray(Object[] arg0) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'toArray'");
     }
     
     private static <E> E[] copyOf(E[] original, int newLength) {

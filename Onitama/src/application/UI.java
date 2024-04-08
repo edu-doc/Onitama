@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import myCollection.MyArrayList;
+import myCollection.MyLinkedListSingle;
+import myCollection.MyQueueLinkedList;
+import onitama.Card;
 import onitama.Color;
 import onitama.OnitamaCard;
 import onitama.OnitamaMatch;
@@ -49,6 +53,22 @@ public class UI {
 			throw new InputMismatchException("Error reading OnitamaPosition");
 		}
 	}
+
+	public static MyLinkedListSingle<Card> returnPlayerCard(){
+		
+		if(OnitamaMatch.getCurrentPlayer() == Color.RED){
+			return OnitamaCard.getListRed();
+		} else if (OnitamaMatch.getCurrentPlayer() == Color.BLUE){
+			return OnitamaCard.getListBlue();
+		} else {
+			throw new InputMismatchException("Error not cards found");
+		}
+
+	}
+
+	public static MyQueueLinkedList<Card> returnTableCard(){
+		return OnitamaCard.getQueue();
+	}
 	
 	public static OnitamaCard readOnitamaCard(Scanner sc) {
 		try {
@@ -58,6 +78,10 @@ public class UI {
 		catch (RuntimeException e) {
 			throw new InputMismatchException("Error Card not found");
 		}
+	}
+
+	public static void exchangeCard(){
+		
 	}
 	
 	public static void printMatch(OnitamaMatch onitamaMatch, List<OnitamaPiece> captured) {

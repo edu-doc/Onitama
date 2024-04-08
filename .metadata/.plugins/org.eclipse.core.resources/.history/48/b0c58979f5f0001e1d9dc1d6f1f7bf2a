@@ -20,15 +20,11 @@ public class Test {
 		OnitamaMatch onitamaMatch = new OnitamaMatch();
 		List<OnitamaPiece> captured = new ArrayList<>();
 		
-		OnitamaCard.getListCard();
-		
 		while (!onitamaMatch.onitamaMateKill()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(onitamaMatch, captured);
 				
-				System.out.println("Table card: "+UI.returnTableCard());
-				System.out.println("Your cards "+UI.returnPlayerCard());
 				System.out.print("Card: ");
 				OnitamaCard card = UI.readOnitamaCard(sc);
 				
@@ -44,12 +40,11 @@ public class Test {
 				System.out.print("Target: ");
 				OnitamaPosition target = UI.readOnitamaPosition(sc);
 				
-				OnitamaPiece capturedPiece = onitamaMatch.perfomeOnitamaMove(source, target, card);
-
+				OnitamaPiece capturedPiece = onitamaMatch.perfomeOnitamaMove(source, target);
+				
 				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}
-				
 			}
 			catch(OnitamaException e) {
 				System.out.println(e.getMessage());
@@ -59,18 +54,23 @@ public class Test {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
+			
+			
+			
 		}
 		
 		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
 			System.out.println("");
 			System.out.println("Blue player win");
-
 		} else {
 			System.out.println("");
 			System.out.println("Red player win");
+		}
+		
+	}
+		
+	}
+	
+	
 
-		}
-		
-		}
-		
 }
