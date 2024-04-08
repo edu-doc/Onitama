@@ -71,7 +71,6 @@ public class OnitamaMatch {
 		
 		if (capturedPiece != null) {
 			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
-			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
 		}
 		
 		return capturedPiece;
@@ -109,15 +108,6 @@ public class OnitamaMatch {
 		return false;
 	}
 	
-	public boolean onitamaMateKill() {
-		for(Piece piece : capturedPieces) {
-			if(piece.toString() == "M") {
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	private void placeNewPiece(char column, int row, OnitamaPiece piece){
 		board.placePiece(piece, new OnitamaPosition(column, row).toPosition());
 		piecesOnTheBoard.add(piece);
@@ -139,11 +129,9 @@ public class OnitamaMatch {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Nickname of RED player: ");
-		//redPlayer = sc.nextLine();
+		redPlayer = sc.nextLine();
 		System.out.print("Nickname of BLUE player: ");
-		//bluePlayer = sc.nextLine();
-
-		sc.close();
+		bluePlayer = sc.nextLine();
 	}
 
 	public String getRedPlayer() {
