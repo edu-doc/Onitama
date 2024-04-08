@@ -11,6 +11,7 @@ import onitama.OnitamaException;
 import onitama.OnitamaMatch;
 import onitama.OnitamaPiece;
 import onitama.OnitamaPosition;
+import model.PlayerBO;
 
 public class Test {
 
@@ -56,14 +57,20 @@ public class Test {
 			}
 		}
 		
+		PlayerBO playerBO = new PlayerBO();
+		String bluePlayer = onitamaMatch.getBluePlayer();
+		String redPlayer = onitamaMatch.getRedPlayer();
+
 		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
 			System.out.println("");
 			System.out.println("Blue player win");
-		} else {
+			playerBO.addWin(bluePlayer);
+			playerBO.addLoss(redPlayer);
+		} else { 
 			System.out.println("");
 			System.out.println("Red player win");
-		}
-		
-		}
-		
+			playerBO.addWin(redPlayer);
+			playerBO.addLoss(bluePlayer);
+		}	
+	}	
 }

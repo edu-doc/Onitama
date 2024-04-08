@@ -2,6 +2,8 @@ package onitama;
 
 import myCollection.*;
 
+import java.util.Scanner;
+
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
@@ -13,6 +15,9 @@ public class OnitamaMatch {
 	private int turn;
 	private static Color currentPlayer;
 	private Board board;
+
+	private String redPlayer;
+	private String bluePlayer;
 	
 	private MyLinkedListSingle<Piece> piecesOnTheBoard = new MyLinkedListSingle<>();
 	private MyLinkedListSingle<Piece> capturedPieces = new MyLinkedListSingle<>();
@@ -118,5 +123,23 @@ public class OnitamaMatch {
 		placeNewPiece('c',5, new Master(board, Color.BLUE));
 		placeNewPiece('d',5, new Disciple(board, Color.BLUE));
 		placeNewPiece('e',5, new Disciple(board, Color.BLUE));
+
+		// Player info
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Nickname of RED player: ");
+		//redPlayer = sc.nextLine();
+		System.out.print("Nickname of BLUE player: ");
+		//bluePlayer = sc.nextLine();
+
+		sc.close();
+	}
+
+	public String getRedPlayer() {
+		return redPlayer;
+	}
+
+	public String getBluePlayer() {
+		return bluePlayer;
 	}
 }
