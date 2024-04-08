@@ -1,4 +1,4 @@
-INDEX VERSION 1.132+C:\Users\anton\OneDrive\Documentos\Codigos\UFERSA\Onitama\.metadata\.plugins\org.eclipse.jdt.core
+INDEX VERSION 1.132+C:\Users\anton\OneDrive\Documentos\Github\Onitama\.metadata\.plugins\org.eclipse.jdt.core
 882546078.index
-3268100622.index
 1865797976.index
+3268100622.index

@@ -1,8 +1,7 @@
 package onitama;
 
-import myCollection.*;
-
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 import boardgame.Board;
 import boardgame.Piece;
@@ -15,12 +14,9 @@ public class OnitamaMatch {
 	private int turn;
 	private static Color currentPlayer;
 	private Board board;
-
-	private String redPlayer;
-	private String bluePlayer;
 	
-	private MyLinkedListSingle<Piece> piecesOnTheBoard = new MyLinkedListSingle<>();
-	private MyLinkedListSingle<Piece> capturedPieces = new MyLinkedListSingle<>();
+	private List<Piece> piecesOnTheBoard = new ArrayList<>();
+	private List<Piece> capturedPieces = new ArrayList<>();
 	
 	public OnitamaMatch() {
 		this.board = new Board(5,5);
@@ -53,12 +49,11 @@ public class OnitamaMatch {
 		return board.piece(position).possibleMoves();
 	}
 	
-	public OnitamaPiece perfomeOnitamaMove(OnitamaPosition sourcePosition, OnitamaPosition targetPosition, OnitamaCard card) {
+	public OnitamaPiece perfomeOnitamaMove(OnitamaPosition sourcePosition, OnitamaPosition targetPosition) {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
 		validateSourcePosition(source);
 		validateTargetPosition(source, target);
-		OnitamaCard.exchangeCard(card);
 		Piece capturedPiece = makeMove(source, target);
 		nextTurn();
 		return (OnitamaPiece)capturedPiece;
@@ -70,8 +65,8 @@ public class OnitamaMatch {
 		board.placePiece(piece, target);
 		
 		if (capturedPiece != null) {
-			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
-			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
+			piecesOnTheBoard.remove(capturedPiece);
+			capturedPieces.add(capturedPiece);
 		}
 		
 		return capturedPiece;
@@ -100,24 +95,6 @@ public class OnitamaMatch {
 		currentPlayer = (currentPlayer == Color.RED) ? Color.BLUE : Color.RED;
 	}
 	
-	public boolean onitamaMateKill() {
-		for(Piece piece : capturedPieces) {
-			if(piece.toString() == "M") {
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean onitamaMateKill() {
-		for(Piece piece : capturedPieces) {
-			if(piece.toString() == "M") {
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	private void placeNewPiece(char column, int row, OnitamaPiece piece){
 		board.placePiece(piece, new OnitamaPosition(column, row).toPosition());
 		piecesOnTheBoard.add(piece);
@@ -134,23 +111,5 @@ public class OnitamaMatch {
 		placeNewPiece('c',5, new Master(board, Color.BLUE));
 		placeNewPiece('d',5, new Disciple(board, Color.BLUE));
 		placeNewPiece('e',5, new Disciple(board, Color.BLUE));
-
-		// Player info
-		Scanner sc = new Scanner(System.in);
-
-		System.out.print("Nickname of RED player: ");
-		//redPlayer = sc.nextLine();
-		System.out.print("Nickname of BLUE player: ");
-		//bluePlayer = sc.nextLine();
-
-		sc.close();
-	}
-
-	public String getRedPlayer() {
-		return redPlayer;
-	}
-
-	public String getBluePlayer() {
-		return bluePlayer;
 	}
 }
