@@ -78,19 +78,19 @@ public class OnitamaCard {
 		
 		if(OnitamaMatch.getCurrentPlayer() == Color.RED){
 			for(Card c : listRed){
-				if (c == card.card) {
-					queue.add(card.card);
+				if (c == OnitamaCard.card) {
+					queue.add(OnitamaCard.card);
 					listRed.add(queue.peek());
-					listRed.remove(card.card);
+					listRed.remove(OnitamaCard.card);
 					queue.remove();
 				}
 			}
 		} else if (OnitamaMatch.getCurrentPlayer() == Color.BLUE) {
 			for(Card c : listBlue){
-				if (c == card.card) {
-					queue.add(card.card);
+				if (c == OnitamaCard.card) {
+					queue.add(OnitamaCard.card);
 					listBlue.add(queue.peek());
-					listBlue.remove(card.card);
+					listBlue.remove(OnitamaCard.card);
 					queue.remove();
 				}
 			}

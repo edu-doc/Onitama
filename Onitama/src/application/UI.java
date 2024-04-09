@@ -89,7 +89,7 @@ public class UI {
 		printCapturedPieces(captured);
 		System.out.println();
 		System.out.println("Turn: "+ onitamaMatch.getTurn());
-		System.out.println("Turn player: "+ onitamaMatch.getCurrentPlayer());
+		System.out.println("Turn player: "+ OnitamaMatch.getCurrentPlayer());
 	}
 
 	public static void printBoard(OnitamaPiece[][] pieces) {

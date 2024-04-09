@@ -166,13 +166,13 @@ public class MyArrayList<E> implements MyList<E>{
     }
 
     @Override
-    public ListIterator listIterator() {
+    public ListIterator<E> listIterator() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listIterator'");
     }
 
     @Override
-    public ListIterator listIterator(int arg0) {
+    public ListIterator<E> listIterator(int arg0) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listIterator'");
     }

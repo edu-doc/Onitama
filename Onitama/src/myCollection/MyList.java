@@ -26,13 +26,13 @@ public interface MyList<E> extends Iterable<E>, Serializable{
 
     boolean isEmpty();
 
-    Iterator iterator();
+    Iterator<E> iterator();
 
     int lastIndexOf(E arg0);
 
-    ListIterator listIterator();
+    ListIterator<E> listIterator();
 
-    ListIterator listIterator(int index);
+    ListIterator<E> listIterator(int index);
 
     boolean remove(E arg0);
 

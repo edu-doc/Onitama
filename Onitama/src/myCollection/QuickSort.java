@@ -55,10 +55,7 @@ public class QuickSort {
             System.out.print(player.getName() + " ");
 			System.out.println(player.getScore());
         }
-
-			QuickSort qs = new QuickSort();
-
-			qs.quickSort(pbo.getPlayers());
+			QuickSort.quickSort(pbo.getPlayers());
 
 			System.out.println("After sorting:");
         	for (Player player : pbo.getPlayers()) {

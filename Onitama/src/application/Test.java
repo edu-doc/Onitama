@@ -145,7 +145,7 @@ public class Test {
 		String bluePlayer = onitamaMatch.getBluePlayer();
 		String redPlayer = onitamaMatch.getRedPlayer();
 
-		if(onitamaMatch.getCurrentPlayer() == Color.RED) {
+		if(OnitamaMatch.getCurrentPlayer() == Color.RED) {
 			System.out.println("");
 			System.out.println("Blue player win");
 			playerBO.addWin(bluePlayer);
