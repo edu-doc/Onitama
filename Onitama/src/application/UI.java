@@ -146,7 +146,5 @@ public class UI {
 		System.out.println(Arrays.toString(blue.toArray()));
 		System.out.print(ANSI_RESET);	
 	}
-	
-	
 }
  

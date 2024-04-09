@@ -15,7 +15,7 @@ import onitama.Player;
 import model.PlayerBO;
 import myCollection.QuickSort;
 
-public class Test {
+public class Main {
 	private static PlayerBO pbo = new PlayerBO();
 	
 	public static void main(String[] args) {

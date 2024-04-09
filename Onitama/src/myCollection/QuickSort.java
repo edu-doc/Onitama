@@ -1,6 +1,5 @@
 package myCollection;
 
-import model.PlayerBO;
 import onitama.Player;
 
 public class QuickSort {
@@ -43,28 +42,5 @@ public class QuickSort {
         Player temp = list.get(i);
         list.set(i, list.get(j));
         list.set(j, temp);
-    }
-	    
-	    
-	    public static void main (String args[]) {
-	    	
-	    	PlayerBO pbo = new PlayerBO();
-	    	
-	    	System.out.println("Before sorting:");
-        	for (Player player : pbo.getPlayers()) {
-            System.out.print(player.getName() + " ");
-			System.out.println(player.getScore());
-        }
-			QuickSort.quickSort(pbo.getPlayers());
-
-			System.out.println("After sorting:");
-        	for (Player player : pbo.getPlayers()) {
-				System.out.print(player.getName() + " ");
-				System.out.println(player.getScore());
-        }
-
-	    }
-	    
-	}
-    
-
+    }	    
+}
