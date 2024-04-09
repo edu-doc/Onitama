@@ -129,11 +129,10 @@ public class OnitamaMatch {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Nickname of RED player: ");
-		//redPlayer = sc.nextLine();
+		redPlayer = sc.nextLine();
 		System.out.print("Nickname of BLUE player: ");
-		//bluePlayer = sc.nextLine();
+		bluePlayer = sc.nextLine();
 
-		sc.close();
 	}
 
 	public String getRedPlayer() {

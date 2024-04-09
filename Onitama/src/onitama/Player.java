@@ -3,10 +3,7 @@ package onitama;
 import java.io.Serializable;
 
 public class Player implements Serializable{
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+ 
 	private String name;
     private int wins;
     private int losses;
@@ -76,4 +73,6 @@ public class Player implements Serializable{
         
         return true;
     }
+
+    
 }

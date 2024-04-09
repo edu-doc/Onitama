@@ -45,4 +45,6 @@ public interface MyList<E> extends Iterable<E>, Serializable{
     E set(int index, E arg1);
 
     int size();
+
+	Object[] toArray();
 }
