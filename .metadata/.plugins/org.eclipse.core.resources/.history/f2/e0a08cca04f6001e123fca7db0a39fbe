@@ -71,6 +71,7 @@ public class OnitamaMatch {
 		
 		if (capturedPiece != null) {
 			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
+			piecesOnTheBoard.transferNode(capturedPieces, capturedPiece);
 		}
 		
 		return capturedPiece;

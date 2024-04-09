@@ -38,11 +38,7 @@ public class PlayerDAO {
         // Save players to ranking.dat
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ranking.dat"));
-            for (Player p : players) {
-            	if(p != null) {
-            		oos.writeObject(p);
-            	}
-            }
+            oos.writeObject(players);
             oos.close();
         } catch (IOException e) {
             e.printStackTrace();
