@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import myCollection.MyArrayList;
 import myCollection.MyLinkedListSingle;
 import myCollection.MyQueueLinkedList;
 import onitama.Card;
@@ -50,7 +49,7 @@ public class UI {
 			return new OnitamaPosition(column, row);
 		}
 		catch (RuntimeException e) {
-			throw new InputMismatchException("Error reading OnitamaPosition");
+			throw new InputMismatchException("Back to the cards");
 		}
 	}
 

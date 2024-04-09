@@ -3,7 +3,8 @@ package onitama;
 import java.io.Serializable;
 
 public class Player implements Serializable{
-    private String name;
+ 
+	private String name;
     private int wins;
     private int losses;
     private int score;
@@ -72,4 +73,6 @@ public class Player implements Serializable{
         
         return true;
     }
+
+    
 }
