@@ -35,7 +35,6 @@ public class PlayerDAO {
     }
 
     public void save() {
-        // Save players to ranking.dat
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ranking.dat"));
             oos.writeObject(players);

@@ -52,7 +52,7 @@ public class PlayerBO {
 
     public void printRankingLosses() {
         // Sort players by losses
-        
+
         // Print ranking
         for (Player p : players) {
             System.out.println(p.getName() + " - " + p.getLosses() + " losses");

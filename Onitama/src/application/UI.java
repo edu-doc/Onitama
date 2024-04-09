@@ -145,10 +145,8 @@ public class UI {
 		System.out.print("Blue: ");
 		System.out.print(ANSI_BLUE);
 		System.out.println(Arrays.toString(blue.toArray()));
-		System.out.print(ANSI_RESET);
-		
+		System.out.print(ANSI_RESET);	
 	}
-	
 	
 	
 }

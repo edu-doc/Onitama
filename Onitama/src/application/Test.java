@@ -78,5 +78,11 @@ public class Test {
 			playerBO.addWin(redPlayer);
 			playerBO.addLoss(bluePlayer);
 		}	
+
+		sc.nextLine();
+
+		// Clear screen
+		UI.clearScreen();
+		playerBO.printRankingScore();
 	}	
 }
