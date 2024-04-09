@@ -3,10 +3,11 @@ package onitama;
 import java.io.Serializable;
 
 public class Player implements Serializable{
-    private String name;
+ 
+	private String name;
     private int wins;
     private int losses;
-    private int score;
+    private float score;
 
     public Player(String name) {
         this.name = name;
@@ -27,18 +28,18 @@ public class Player implements Serializable{
         return losses;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
     public void addWin() {
         wins++;
-        score = wins - losses;
+        score = wins / (wins + losses);
     }
 
     public void addLoss() {
         losses++;
-        score = wins - losses;
+        score = wins / (wins + losses);
     }
 
     public void reset() {
@@ -72,4 +73,6 @@ public class Player implements Serializable{
         
         return true;
     }
+
+    
 }

@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import myCollection.MyArrayList;
 import myCollection.MyLinkedListSingle;
 import myCollection.MyQueueLinkedList;
 import onitama.Card;
@@ -50,7 +49,7 @@ public class UI {
 			return new OnitamaPosition(column, row);
 		}
 		catch (RuntimeException e) {
-			throw new InputMismatchException("Error reading OnitamaPosition");
+			throw new InputMismatchException("Back to the cards");
 		}
 	}
 
@@ -90,7 +89,7 @@ public class UI {
 		printCapturedPieces(captured);
 		System.out.println();
 		System.out.println("Turn: "+ onitamaMatch.getTurn());
-		System.out.println("Turn player: "+ onitamaMatch.getCurrentPlayer());
+		System.out.println("Turn player: "+ OnitamaMatch.getCurrentPlayer());
 	}
 
 	public static void printBoard(OnitamaPiece[][] pieces) {
@@ -145,11 +144,7 @@ public class UI {
 		System.out.print("Blue: ");
 		System.out.print(ANSI_BLUE);
 		System.out.println(Arrays.toString(blue.toArray()));
-		System.out.print(ANSI_RESET);
-		
+		System.out.print(ANSI_RESET);	
 	}
-	
-	
-	
 }
  

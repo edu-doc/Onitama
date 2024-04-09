@@ -349,9 +349,15 @@ public class MyLinkedListSingle<E> implements MyLinkedListInterface<E>{
     }
 
     @Override
+    public Object[] toArray() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'toArray'");
+    }
+
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("[");
+        sb.append("");
         Node p = head;
         while (p != null) {
             sb.append(p.data);
@@ -360,7 +366,7 @@ public class MyLinkedListSingle<E> implements MyLinkedListInterface<E>{
             }
             p = p.next;
         }
-        sb.append("]");
+        sb.append("");
         return sb.toString();
     }
 }
