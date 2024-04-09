@@ -363,4 +363,10 @@ public class MyLinkedListSingle<E> implements MyLinkedListInterface<E>{
         sb.append("");
         return sb.toString();
     }
+
+	@Override
+	public Object[] toArray() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

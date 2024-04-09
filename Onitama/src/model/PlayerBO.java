@@ -6,8 +6,18 @@ import onitama.Player;
 public class PlayerBO {
     PlayerDAO dao = new PlayerDAO();
     MyList<Player> players = dao.getPlayers();
+    
+    
 
-    public void addWin(String playerNick) {
+    public MyList<Player> getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(MyList<Player> players) {
+		this.players = players;
+	}
+
+	public void addWin(String playerNick) {
         // Fing player in list
         for (Player p : players) {
             if (p.getName().equals(playerNick)) {
