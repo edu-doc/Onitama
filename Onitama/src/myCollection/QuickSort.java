@@ -3,7 +3,7 @@ package myCollection;
 import model.PlayerBO;
 import onitama.Player;
 
-public class quickSort {
+public class QuickSort {
 
 	public static void quickSort(MyList<Player> list) {
         if (list.size() == 0) return; // Adicionando verificação para lista vazia
@@ -56,7 +56,7 @@ public class quickSort {
 			System.out.println(player.getScore());
         }
 
-			quickSort qs = new quickSort();
+			QuickSort qs = new QuickSort();
 
 			qs.quickSort(pbo.getPlayers());
 

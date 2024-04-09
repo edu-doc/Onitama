@@ -11,11 +11,12 @@ import onitama.OnitamaException;
 import onitama.OnitamaMatch;
 import onitama.OnitamaPiece;
 import onitama.OnitamaPosition;
+import onitama.Player;
 import model.PlayerBO;
-import myCollection.quickSort;
+import myCollection.QuickSort;
 
 public class Test {
-
+	private static PlayerBO pbo = new PlayerBO();
 	
 	public static void main(String[] args) {
 		menu();
@@ -23,11 +24,11 @@ public class Test {
 
 	public static void menu(){
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite para onde quer ir: ");
 		System.out.println("1: Jogo");
 		System.out.println("2: Ranking");
 		System.out.println("3: Buscar jogador");
 		System.out.println("4: Sair");
+		System.out.print("Digite para onde quer ir: ");
 		int caso = sc.nextInt();
 		sc.nextLine();
 		System.out.println("");
@@ -39,6 +40,26 @@ public class Test {
 		
 			case 2:
 				ranking();
+				break;
+			
+			case 3:
+				System.out.print("Nome do jogador que deseja buscar: ");
+				String nome = sc.nextLine();
+				System.out.println("");
+
+				Player searchedPlayer = pbo.searchPlayer(nome);
+
+				if(searchedPlayer == null){
+					System.out.println("Jogador não encontrado");
+				} else {
+					System.out.println(
+						"Jogador: " + searchedPlayer.getName() + "\n"
+						+ "-> Scores: " + searchedPlayer.getScore() + "\n"
+						+ "-> Wins: " + searchedPlayer.getWins() + "\n"
+						+ "-> Losses: " + searchedPlayer.getLosses()
+					);
+				}
+				
 				break;
 			
 			case 4:
@@ -55,11 +76,7 @@ public class Test {
 	}
 
 	public static void ranking(){
-
-		PlayerBO pbo = new PlayerBO();
-		quickSort qs = new quickSort();
-
-		qs.quickSort(pbo.getPlayers());
+		QuickSort.quickSort(pbo.getPlayers());
 
 		System.out.println("Ranking:");
 		for (int i = 0; i < 10; i++) {
@@ -75,7 +92,6 @@ public class Test {
 		System.out.println("");
 
 		menu();
-
 	}
 
 	public static void jogo(){
@@ -145,6 +161,5 @@ public class Test {
 
 		// Clear screen
 		UI.clearScreen();
-		playerBO.printRankingScore();
 	}	
 }

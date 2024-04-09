@@ -62,30 +62,9 @@ public class PlayerBO {
         return null;
     }
 
-    public void printRankingWins() {
-        // Sort players by wins
-
-        // Print ranking
+    public void printPlayers() {
         for (Player p : players) {
-            System.out.println(p.getName() + " - " + p.getWins() + " wins");
-        }
-    }
-
-    public void printRankingLosses() {
-        // Sort players by losses
-
-        // Print ranking
-        for (Player p : players) {
-            System.out.println(p.getName() + " - " + p.getLosses() + " losses");
-        }
-    }
-
-    public void printRankingScore() {
-        // Sort players by score
-
-        // Print ranking
-        for (Player p : players) {
-            System.out.println(p.getName() + " - " + p.getScore() + " points");
+            System.out.println(p.getName() + " - " + p.getWins() + " wins" + " - " + p.getLosses() + " losses");
         }
     }
 }
