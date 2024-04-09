@@ -41,6 +41,17 @@ public class PlayerBO {
         dao.save();
     }
 
+    public Player searchPlayer(String playerNick) {
+        for (Player p : players) {
+            if (p.getName().equals(playerNick)) {
+                return p;
+            }
+        }
+
+        // Player not found
+        return null;
+    }
+
     public void printRankingWins() {
         // Sort players by wins
 

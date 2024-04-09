@@ -33,12 +33,12 @@ public class Player implements Serializable{
 
     public void addWin() {
         wins++;
-        score = (wins + losses);
+        score = wins / (wins + losses);
     }
 
     public void addLoss() {
         losses++;
-        score = wins - losses;
+        score = wins / (wins + losses);
     }
 
     public void reset() {
