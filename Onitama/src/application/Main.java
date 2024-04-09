@@ -23,6 +23,7 @@ public class Main {
 	}
 
 	public static void menu(){
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("1: Jogo");
 		System.out.println("2: Ranking");
@@ -43,23 +44,7 @@ public class Main {
 				break;
 			
 			case 3:
-				System.out.print("Nome do jogador que deseja buscar: ");
-				String nome = sc.nextLine();
-				System.out.println("");
-
-				Player searchedPlayer = pbo.searchPlayer(nome);
-
-				if(searchedPlayer == null){
-					System.out.println("Jogador não encontrado");
-				} else {
-					System.out.println(
-						"Jogador: " + searchedPlayer.getName() + "\n"
-						+ "-> Scores: " + searchedPlayer.getScore() + "\n"
-						+ "-> Wins: " + searchedPlayer.getWins() + "\n"
-						+ "-> Losses: " + searchedPlayer.getLosses()
-					);
-				}
-				
+				buscarJogador();
 				break;
 			
 			case 4:
@@ -73,6 +58,7 @@ public class Main {
 				menu();
 				break;
 		}
+		sc.close();
 	}
 
 	public static void ranking(){
@@ -91,6 +77,31 @@ public class Main {
 
 		System.out.println("");
 
+		menu();
+	}
+
+	public static void buscarJogador(){
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Nome do jogador que deseja buscar: ");
+		String nome = sc.nextLine();
+		System.out.println("");
+
+		Player searchedPlayer = pbo.searchPlayer(nome);
+
+		if(searchedPlayer == null){
+			System.out.println("Jogador não encontrado");
+		} else {
+			System.out.println(
+			"Jogador: " + searchedPlayer.getName() + "\n"
+			+ "-> Scores: " + searchedPlayer.getScore() + "\n"
+			+ "-> Wins: " + searchedPlayer.getWins() + "\n"
+			+ "-> Losses: " + searchedPlayer.getLosses()
+		);
+		}
+		System.out.println("");
+		
 		menu();
 	}
 
@@ -159,7 +170,6 @@ public class Main {
 
 		sc.nextLine();
 
-		// Clear screen
-		UI.clearScreen();
+		menu();
 	}	
 }

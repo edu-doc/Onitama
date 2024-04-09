@@ -132,6 +132,7 @@ public class OnitamaMatch {
 		redPlayer = sc.nextLine();
 		System.out.print("Nickname of BLUE player: ");
 		bluePlayer = sc.nextLine();
+
 	}
 
 	public String getRedPlayer() {
