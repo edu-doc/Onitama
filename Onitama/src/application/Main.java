@@ -61,7 +61,7 @@ public class Main {
 		sc.close();
 	}
 
-	public static void ranking(){
+	public static void ranking(){		
 		QuickSort.quickSort(pbo.getPlayers());
 
 		System.out.println("Ranking:");
@@ -70,7 +70,7 @@ public class Main {
 				System.out.println("Sem jogador");
 			} else {
 				System.out.print("Jogador: "+ pbo.getPlayers().get(i).getName() + ", Scores: ");
-				System.out.println(pbo.getPlayers().get(i).getScore());
+				System.out.printf("%.2f\n",(pbo.getPlayers().get(i).getScore()*100));
 			}
 			
         }
@@ -152,20 +152,19 @@ public class Main {
 			}
 		}
 		
-		PlayerBO playerBO = new PlayerBO();
 		String bluePlayer = onitamaMatch.getBluePlayer();
 		String redPlayer = onitamaMatch.getRedPlayer();
 
 		if(OnitamaMatch.getCurrentPlayer() == Color.RED) {
 			System.out.println("");
 			System.out.println("Blue player win");
-			playerBO.addWin(bluePlayer);
-			playerBO.addLoss(redPlayer);
+			pbo.addWin(bluePlayer);
+			pbo.addLoss(redPlayer);
 		} else { 
 			System.out.println("");
 			System.out.println("Red player win");
-			playerBO.addWin(redPlayer);
-			playerBO.addLoss(bluePlayer);
+			pbo.addWin(redPlayer);
+			pbo.addLoss(bluePlayer);
 		}	
 
 		sc.nextLine();
