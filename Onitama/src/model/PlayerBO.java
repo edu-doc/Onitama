@@ -6,8 +6,6 @@ import onitama.Player;
 public class PlayerBO {
     PlayerDAO dao = new PlayerDAO();
     MyList<Player> players = dao.getPlayers();
-    
-    
 
     public MyList<Player> getPlayers() {
 		return players;

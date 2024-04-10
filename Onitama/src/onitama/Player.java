@@ -34,12 +34,13 @@ public class Player implements Serializable{
 
     public void addWin() {
         wins++;
-        score = wins / (wins + losses);
+        // score of percentage with cast to float on win
+        score = ((float) wins) / (wins + losses);
     }
 
     public void addLoss() {
         losses++;
-        score = wins / (wins + losses);
+        score = ((float) wins) / (wins + losses);
     }
 
     public void reset() {
